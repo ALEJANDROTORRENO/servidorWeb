@@ -91,7 +91,7 @@ class ObjLogin {
             localStorage.setItem("nom",     objRebut.missatge.nom)
             localStorage.setItem("token",   objRebut.missatge.token)
             localStorage.setItem("tipus",   objRebut.missatge.tipus)
-
+/*
             // Amaga el botó de logar-se del menú i mostra els botons de backoffice
             document.getElementById('botoLoginWeb').style.display = 'none'
             document.getElementById('botoGestioUsuarisWeb').style.display = 'flex'
@@ -100,7 +100,7 @@ class ObjLogin {
             document.getElementById('botoLoginMobil').style.display = 'none'
             document.getElementById('botoGestioUsuarisMobil').style.display = 'flex'
             document.getElementById('botoGestioProductesMobil').style.display = 'flex'
-            document.getElementById('botoLogoutMobil').style.display = 'flex'
+            document.getElementById('botoLogoutMobil').style.display = 'flex'*/
         } else {
             this.tancaLaSessio()
         }
@@ -110,7 +110,7 @@ class ObjLogin {
 
         // Neteja les dades del localStorage perquè ja no són vàlides
         localStorage.clear()
-
+/*
         // Mostra el botó de logar-se al menú i amaga els botons de backoffice
         document.getElementById('botoLoginWeb').style.display = 'flex'
         document.getElementById('botoGestioUsuarisWeb').style.display = 'none'
@@ -119,6 +119,6 @@ class ObjLogin {
         document.getElementById('botoLoginMobil').style.display = 'flex'
         document.getElementById('botoGestioUsuarisMobil').style.display = 'none'
         document.getElementById('botoGestioProductesMobil').style.display = 'none'
-        document.getElementById('botoLogoutMobil').style.display = 'none'
+        document.getElementById('botoLogoutMobil').style.display = 'none'*/
     }
 }

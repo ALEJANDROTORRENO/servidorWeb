@@ -15,50 +15,126 @@ table, th, td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
+#fotoSuperior {
+    display: flex;
+    font-family: "Caladea";
+    font-size: 64px;
+    background-image: url(/web/imatges/avion2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100px;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 16px;
+}
+@media only screen and (max-device-width: 599px) {
+    #fotoSuperior {
+        font-size: 32px;
+                      
+    }
+    #fotoSuperior > div {
+        margin-top: 75px;
+    }
+}
+body {
+    font-family: "Caladea";
+  
+}
+body > div {
+    display: none;
+}
+body > #frontendHome {
+    display: flex;
+}
+.botoMenu:hover {
+    text-decoration: underline;
+    
+}
 .botoMenu {
-    color: blue;
+    color: black;
     cursor: pointer;
     margin: 0 16px;
 }
 
-.botoMenu:hover {
-    text-decoration: underline;
-}
-
-body {
-    font-family: "Open Sans";
-}
-
-body > #frontendHome {
-    display: flex;
-}
-
-body > #frontendPresentacio {
-    display: none;
-}
-
-body > #frontendProductes {
-    display: none;
-}
-
-body > #frontendProductes > #productesContinguts {
+#productesContinguts {
     width: 100%;
 }
-
-body > #frontendContacte {
-    display: none;
+#frontendMenuMobil{
+    background-color: white;
+    backdrop-filter: saturate(200%) blur(5px);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease;
 }
-
-body > #backofficeUsuaris {
-    display: none;
+#menuContainer{
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+    will-change: transform;
 }
-
-body > #backofficeProductes {
-    display: none;
+#frontendMenuMobil > #menuContainer > div:first-child{
+    padding: 0.5em auto;
 }
-
-body > #popups {
+#frontendMenuMobil > #menuContainer > div {
+    border-bottom: 1px solid lightgrey;
+    padding: 0.2em;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#frontendMenuWeb{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey ;
+    backdrop-filter: saturate(180%) blur (20px);
+    background-color: white;
+    min-height: 48px;
+    align-items: center;
+}
+.espacio{
+    flex-grow: 1;
+}
+.espacio2{
+    flex-grow: 0.1;
+}
+.avionMenu{
+    margin-right: 16px;
+}
+.apartadopresentaciontop {
+    display: flex;
+    flex-direction: row;
+}
+.apartadopresentacion{
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+}
+.parrafopresentacion{
+    text-align: center;
+    color: black; 
+}
+#frontendPresentacio{
+    flex-direction: column;
+}  
+#frontendContacte{
+    flex-direction: column;
+}
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +145,8 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
 }
-
-
