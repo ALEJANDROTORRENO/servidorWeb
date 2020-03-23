@@ -131,6 +131,26 @@ body > #frontendHome {
 #frontendPresentacio{
     flex-direction: column;
 }  
+#tablaPresentacio{
+    
+}
+table{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+}
+th, td{
+    border: solid 1px black;
+    padding: 10px;
+}
+thead{
+    background-color: #db940f;
+    border-bottom: solid 5px #0f362d ;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
 #frontendContacte{
     flex-direction: column;
 }
@@ -149,4 +169,8 @@ body > #frontendHome {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
+}
+.Prueba{
+    color: red;
+    flex-wrap: wrap;
 }

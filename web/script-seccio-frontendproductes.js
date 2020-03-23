@@ -18,13 +18,14 @@ class ObjSeccioFrontendProductes {
 
         // Demanem el llistat de productes al servidor
         objRebut = await promiseCallServer('POST', '/call/llistatProductes', {})
-
+        console.log (objRebut)
         // Transformem l'objecte rebut en codi HTML
+
         if (objRebut.resultat === 'ok') {
             for (cntProducte = 0; cntProducte < objRebut.missatge.length; cntProducte = cntProducte + 1) {
                 valor = objRebut.missatge[cntProducte]
                 codiHTML = codiHTML + '<img src="' + valor.imatge + '" width="100" />'
-                codiHTML = codiHTML + '<h3>' + valor.nom +'</h3>'
+                codiHTML = codiHTML + '<div class ="Prueba">' + valor.nom +'</div>'
                 codiHTML = codiHTML + '<div>' + valor.descripcio +'</div>'
                 codiHTML = codiHTML + '<div>' + valor.preu +' €</div>'
                 codiHTML = codiHTML + '<hr/>'
