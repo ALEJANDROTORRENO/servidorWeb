@@ -30,11 +30,13 @@ class Obj {
             try {
                 sql = 'CREATE TABLE productes (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, nom VARCHAR(50) NOT NULL, descripcio TEXT, preu INT(6), imatge VARCHAR(255))'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("123Tele", "Tele molt xula", 800, "/web/imatges/producte-1.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Pack Rio de Janeiro", "Actividades Acuaticas en las mejores playas de todo Rio de Janeriro", 900, \'["/web/imatges/playaRDJ.jpg","/web/imatges/surfRDJ.jpg","/web/imatges/futbolRDJ.jpg"]\')'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Batidora", "Batidora molt xula", 20, "/web/imatges/producte-2.png")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Pack New York", "Visita todos los monumentos que simpre has visto por fotos de la mejor manera", 1350, \'["/web/imatges/estatulibertad.jpg","/web/imatges/Central-ParkNY.jpg","/web/imatges/puenteNY.jpg"]\')'
                 await db.promiseQuery(sql)
-                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Aspirador", "Aspirador molt xulo", 300, "/web/imatges/producte-3.jpg")'
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Pack Tailandia", "Paseo en canoa para toda la família por toda la costa Tailandesa", 1000, \'["/web/imatges/canoa1.jpg","/web/imatges/paisajeTAIL.jpg","/web/imatges/paisaje2TAIL.jpeg"]\')'
+                await db.promiseQuery(sql)
+                sql = 'INSERT INTO productes (nom, descripcio, preu, imatge) VALUES ("Pack Dubai", "¿Te gustan las emociones fuertes?Salta con nostros sobre la maravillosa palmera de Dubai", 4000, \'["/web/imatges/dubai1.jpg","/web/imatges/dubai2.jpg","/web/imatges/dubai3.jpeg"]\')'
                 await db.promiseQuery(sql)
             } catch (e) {
                 console.error(e)
