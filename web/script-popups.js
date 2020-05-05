@@ -5,6 +5,7 @@ class ObjPopups {
 
     // Mostra un popup
     mostraPopup (nom) {
+        console.log(nom)
         document.getElementById('popups').style.display = 'flex'
         document.getElementById(nom).style.display = 'flex'
     }
