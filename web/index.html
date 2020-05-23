@@ -10,6 +10,7 @@
       rel="stylesheet">    
         <a href="https://icons8.com/icon/37246/gmail"></a>    
         <link href="https://fonts.googleapis.com/css?family=Caladea&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <script src='https://code.getmdl.io/1.3.0/material.min.js' defer></script>
         <script src='/web/script-login.js'></script>
         <script src='/web/script-navegacio.js'></script>
@@ -54,7 +55,6 @@
                 <div ontouchend='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
                 <div ontouchend='login.tancaLaSessio()'>Sortir</div>  
             </div>
-        </div>
         <div id='frontendHome'>
             Pàgina principal
         </div>
@@ -133,7 +133,7 @@
             <div><img src="https://img.icons8.com/ios/50/000000/facebook-new.png"/>@agenziatravelwithus</div>
             <div><img src="https://img.icons8.com/ios/50/000000/gmail.png"/>agenziatravelwithuscontact@gmail.com</div>            
             <div><img src="https://img.icons8.com/ios/50/000000/calendar.png"/>Horarios: Lunes a viernes de 8:30-20:30   Sabados de 9:00-12:30 y 15:00-19:00</div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.9016028829583!2d11.873131315758693!3d45.41132374499074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda5b22f66c19%3A0x3e8cdd78c7216b23!2sAgenzia%20Viaggi%20Travel%20With%20Us%20(S.R.L.)!5e0!3m2!1ses!2sfr!4v1583927636043!5m2!1ses!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.9016028829583!2d11.873131315758693!3d45.41132374499074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda5b22f66c19%3A0x3e8cdd78c7216b23!2sAgenzia%20Viaggi%20Travel%20With%20Us%20(S.R.L.)!5e0!3m2!1ses!2sfr!4v1583927636043!5m2!1ses!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
         <div id='backofficeUsuaris'>
             <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
@@ -143,31 +143,34 @@
             Pàgina per fer la gestió dels productes
         </div>
         <div id='popups' onclick='popups.amagaAmbClick(event)'>
-            <div id='popupLogin' class='flexColumn'>
-                <div>Email:</div>
+            <div id='popupLogin'>
+                <div class="estilo-login">
+                <h5>Email:</h5>
                 <input id='loginCorreu' type='text' class='halfWidth' />
-                <div>Codi:</div>
+                <h5>Codi:</h5>
                 <input id='loginCodi' type='password' class='halfWidth' />
                 <br/>
                 <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
                 <div id='loginLoading' class='none'>Carregant ...</div>
                 <div id='loginError' class='none'>Error al fer login ...</div>
             </div>
-            <div id='popupBackofficeUsuaris' class='flexColumn'>
-                <div>Id:</div>
+            </div>  
+            <div id='popupBackofficeUsuaris'>
+                <div class="estilo-login">
+                <div class="letras-creacion-usuaris">Id:</div>
                 <div id='backofficeUsuarisId'></div>
-                <div>Correu:</div>
+                <div class="letras-creacion-usuaris">Correu:</div>
                 <input id='backofficeUsuarisCorreu' type='text' value=''/>
-                <div>Nom:</div>
+                <div class="letras-creacion-usuaris">Nom:</div>
                 <input id='backofficeUsuarisNom' type='text' value=''/>
-                <div>Tipus:</div>
+                <div class="letras-creacion-usuaris">Tipus:</div>
                 <select id='backofficeUsuarisTipus'>
                     <option>admin</option>
                     <option>normal</option>
                 </select>
-                <div>Codi:</div>
+                <div class="letras-creacion-usuaris">Codi:</div>
                 <input id='backofficeUsuarisCodi' type='text' value=''/>
-                <div>Imatge:</div>
+                <div class="letras-creacion-usuaris">Imatge:</div>
                 <div class='flex flexRow'>
                     <img id='backofficeUsuarisImg' src='/web/imatges/transparent.png' width='100'/>
                     <input id='backofficeUsuarisArxiu' class="dropFile" accept="image/*" type="file" onchange="seccioBackofficeUsuaris.mostraImatge()" />
@@ -179,6 +182,7 @@
                 <input id='backofficeUsuarisBotoEsborra' type='button' value='Esborra l&#39;usuari' onclick='seccioBackofficeUsuaris.esborraUsuariDelServidor()' />
                 <div id='backofficeUsuarisPopupLoading' class='none'>Carregant ...</div>
                 <div id='backofficeUsuarisPopupError' class='none'>Error al guardar les dades ...</div>
+                </div>
             </div>
         </div>
     </body>

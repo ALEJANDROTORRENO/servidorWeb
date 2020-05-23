@@ -195,3 +195,31 @@ tr:nth-child(even){
     display: flex;
     align-items: center;    
 }
+#backofficeUsuaris{
+    flex-direction: column;
+    margin: auto;
+    max-width: 1900px;
+    align-items: center;
+}
+#backofficeUsuarisContinguts{
+    margin-top: 80px;
+    flex-direction: column;
+}
+#backofficeUsuarisLoading{
+    display: flex;
+    margin-top: 200px;
+}
+.datos-tabla{
+    background-color: grey;
+    color: black;
+}
+.estilo-login{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+    align-items: center;
+    }
+.letras-creacion-usuaris{
+    font-family: "Oswald";
+    font-weight: bold;
+    }    

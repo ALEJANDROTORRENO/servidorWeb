@@ -61,7 +61,6 @@ class ObjLogin {
         } catch (e) {
             console.error(e)
         }
-
         refCarrega.style.display = 'none'
         if (objRebut.resultat === 'ok') {
             // Si hem pogut fer login, guardem la informació i amaguem el popup de login (també borrem els valors)
@@ -91,16 +90,16 @@ class ObjLogin {
             localStorage.setItem("nom",     objRebut.missatge.nom)
             localStorage.setItem("token",   objRebut.missatge.token)
             localStorage.setItem("tipus",   objRebut.missatge.tipus)
-/*
+
             // Amaga el botó de logar-se del menú i mostra els botons de backoffice
             document.getElementById('botoLoginWeb').style.display = 'none'
             document.getElementById('botoGestioUsuarisWeb').style.display = 'flex'
             document.getElementById('botoGestioProductesWeb').style.display = 'flex'
             document.getElementById('botoLogoutWeb').style.display = 'flex'
-            document.getElementById('botoLoginMobil').style.display = 'none'
-            document.getElementById('botoGestioUsuarisMobil').style.display = 'flex'
-            document.getElementById('botoGestioProductesMobil').style.display = 'flex'
-            document.getElementById('botoLogoutMobil').style.display = 'flex'*/
+            //document.getElementById('botoLoginMobil').style.display = 'none'
+            //document.getElementById('botoGestioUsuarisMobil').style.display = 'flex'
+            //document.getElementById('botoGestioProductesMobil').style.display = 'flex'
+            //document.getElementById('botoLogoutMobil').style.display = 'flex'
         } else {
             this.tancaLaSessio()
         }
