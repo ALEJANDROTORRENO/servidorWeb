@@ -3,7 +3,7 @@ var navegacio = null
 var popups = null
 var seccioBackofficeUsuaris = null
 var seccioFrontendProductes = null
-
+var seccioFrontendProducte = null
 // Aquesta funció s'inicia al carregar la pàgina
 async function inicia () {
 
@@ -13,7 +13,7 @@ async function inicia () {
     popups = new ObjPopups()
     seccioBackofficeUsuaris = new ObjSeccioBackofficeUsuaris()
     seccioFrontendProductes = new ObjSeccioFrontendProductes()
-
+    seccioFrontendProducte = new ObjSeccioFrontendProducte()
     // Inicia les funcions de navegació HTML5
     navegacio.inicia()
 
@@ -33,6 +33,7 @@ async function inicia () {
 function iniciaSeccio(seccio) {
     switch(seccio) {
     case 'frontendProductes': seccioFrontendProductes.iniciaSeccio(); break
+    case 'frontendProducte': seccioFrontendProducte.iniciaSeccio(); break
     case 'backofficeUsuaris': seccioBackofficeUsuaris.iniciaSeccio(); break
     default:
     }

@@ -43,15 +43,25 @@ class Obj {
                 return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: no s'ha pogut crear la taula productes"})  
             }
         }
-    
+        
         // Demana la informació de productes
-        try {
-            sql = 'SELECT * FROM productes'
-            taula = await db.promiseQuery(sql)
-        } catch (e) {
-            console.error(e)
-            return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
-        }   
+        if (data.id) {
+            try {
+                sql = 'SELECT * FROM productes WHERE id=' + data.id
+                taula = await db.promiseQuery(sql)
+            } catch (e) {
+                console.error(e)
+                return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
+            }
+        } else {
+            try {
+                sql = 'SELECT * FROM productes'
+                taula = await db.promiseQuery(sql)
+            } catch (e) {
+                console.error(e)
+                return result.json({ resultat: "ko", missatge: "Error, funció llistatProductes: ha fallat la crida a les dades"})  
+            }
+        }
     
         // Si hem aconseguit dades corectament, tornem la taula resultant
         if (typeof taula === 'object' && typeof taula.length === 'number') {

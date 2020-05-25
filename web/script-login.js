@@ -109,13 +109,13 @@ class ObjLogin {
 
         // Neteja les dades del localStorage perquè ja no són vàlides
         localStorage.clear()
-/*
+
         // Mostra el botó de logar-se al menú i amaga els botons de backoffice
         document.getElementById('botoLoginWeb').style.display = 'flex'
         document.getElementById('botoGestioUsuarisWeb').style.display = 'none'
         document.getElementById('botoGestioProductesWeb').style.display = 'none'
         document.getElementById('botoLogoutWeb').style.display = 'none'
-        document.getElementById('botoLoginMobil').style.display = 'flex'
+        /*document.getElementById('botoLoginMobil').style.display = 'flex'
         document.getElementById('botoGestioUsuarisMobil').style.display = 'none'
         document.getElementById('botoGestioProductesMobil').style.display = 'none'
         document.getElementById('botoLogoutMobil').style.display = 'none'*/
