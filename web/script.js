@@ -30,10 +30,10 @@ async function inicia () {
     await login.autenticaAmbToken()
 }
 
-function iniciaSeccio(seccio) {
+function iniciaSeccio(seccio,id) {
     switch(seccio) {
     case 'frontendProductes': seccioFrontendProductes.iniciaSeccio(); break
-    case 'frontendProducte': seccioFrontendProducte.iniciaSeccio(); break
+    case 'frontendProducte': seccioFrontendProducte.iniciaSeccio(id); break
     case 'backofficeUsuaris': seccioBackofficeUsuaris.iniciaSeccio(); break
     default:
     }

@@ -56,8 +56,29 @@
                 <div ontouchend='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
                 <div ontouchend='login.tancaLaSessio()'>Sortir</div>  
             </div>
-        <div id='frontendHome'>
-            Pàgina principal
+        <div id='frontendHome'class="inicio">
+            <div class="inicio1">
+                <div class="cartainicio1">
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Viaja con nosotros</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                    Recorre todo el mundo con Travel with us
+                    </div>
+                    </div>
+                </div>
+                <div class="cartainicio2">
+                    <div class="demo-card-wide2 mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Tailandia</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                    Monta en canoa por este maravilloso paisaje
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id='frontendPresentacio'>
             <div><h3>Travel With Us</h3></div>
@@ -141,7 +162,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.9016028829583!2d11.873131315758693!3d45.41132374499074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eda5b22f66c19%3A0x3e8cdd78c7216b23!2sAgenzia%20Viaggi%20Travel%20With%20Us%20(S.R.L.)!5e0!3m2!1ses!2sfr!4v1583927636043!5m2!1ses!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
         <div id='backofficeUsuaris'>
-            <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
+            <div id='backofficeUsuarisLoading'>Cargando usuarios ...</div>
             <div id='backofficeUsuarisContinguts' class='flexColumn'></div>
         </div>
         <div id='backofficeProductes'>
@@ -156,8 +177,8 @@
                 <input id='loginCodi' type='password' class='halfWidth' />
                 <br/>
                 <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
-                <div id='loginLoading' class='none'>Carregant ...</div>
-                <div id='loginError' class='none'>Error al fer login ...</div>
+                <div id='loginLoading' class='none'>Cargando...</div>
+                <div id='loginError' class='none'>Error al registrarse ...</div>
             </div>
             </div>  
             <div id='popupBackofficeUsuaris'>

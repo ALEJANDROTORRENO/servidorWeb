@@ -150,7 +150,7 @@ tr:nth-child(even){
 }
 #frontendContacte{
     flex-direction: column;
-}
+    }
 #popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -170,11 +170,13 @@ tr:nth-child(even){
 #productesContinguts{
     flex-direction: column;
     justify-content: center;
+    background-color: rgb(240, 178, 97);
 }
 .productes{
     margin: 16px;
     border: solid 1px black;
     padding: 8px;
+    background-color: rgb(228, 210, 210);
 }
 .tituloproductes{
     font-size: 2em;
@@ -193,7 +195,11 @@ tr:nth-child(even){
 }
 .imagenesproducte{
     display: flex;
-    align-items: center;    
+    align-items: center;  
+     
+}
+.imagenesproducte:hover{
+    cursor: pointer;
 }
 #backofficeUsuaris{
     flex-direction: column;
@@ -223,3 +229,49 @@ tr:nth-child(even){
     font-family: "Oswald";
     font-weight: bold;
     }    
+.inicio{
+    flex-direction: column;
+    margin: auto;
+    max-width: 1950px;
+    align-items: center;
+}
+.inicio1{
+    background-image: url("/web/imatges/fotoinicio2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    
+}
+.demo-card-wide.mdl-card {
+    width: 350px;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url("/web/imatges/fotoinicio1.jpg") center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+.cartainicio1{
+    margin-left: 75px;
+    margin-top: 50px;
+}
+.demo-card-wide2.mdl-card {
+    width: 350px;
+  }
+  .demo-card-wide2 > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url("/web/imatges/canoa1.jpg") center / cover;
+  }
+  .demo-card-wide2 > .mdl-card__menu {
+    color: #fff;
+  }
+.cartainicio2{
+    margin-left: 380px;
+    margin-top: 50px;
+}
